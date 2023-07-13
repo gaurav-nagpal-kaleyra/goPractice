@@ -27,7 +27,7 @@ func getUsersDataHandler(writer http.ResponseWriter, request *http.Request) {
 	writer.WriteHeader(http.StatusOK)
 	err := json.NewEncoder(writer).Encode(&users)
 	if err != nil {
-		log.Fatalln("There was some error ecoding user to writer")
+		log.Fatalln("There was some error encoding user to writer")
 	}
 }
 
