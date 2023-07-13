@@ -33,7 +33,7 @@ func getUsersDataHandler(writer http.ResponseWriter, request *http.Request) {
 
 func createUserHandler(writer http.ResponseWriter, request *http.Request) {
 	writer.Header().Set("Content-Type", "application/json")
-	writer.WriteHeader(http.StatusOK)
+	writer.WriteHeader(http.StatusCreated)
 
 	var user User
 	err := json.NewDecoder(request.Body).Decode(&user)
